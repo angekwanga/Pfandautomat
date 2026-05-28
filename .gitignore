@@ -1,0 +1,43 @@
+# Alles ignorieren
+*
+
+# .gitignore selbst behalten
+!.gitignore
+
+# Wurzel-Dateien behalten
+!CMakeLists.txt
+!archi.txt
+!README.md
+
+# Verzeichnisse freigeben (jede Ebene einzeln!)
+!app/
+app/*
+!app/CMakeLists.txt
+
+!app/include/
+!app/include/*.h
+!app/include/lagerung/
+!app/include/lagerung/*.h
+!app/include/mechanik/
+!app/include/mechanik/*.h
+!app/include/sensorik/
+!app/include/sensorik/*.h
+
+!app/src/
+!app/src/*.cpp
+!app/src/lagerung/
+!app/src/lagerung/*.cpp
+!app/src/mechanik/
+!app/src/mechanik/*.cpp
+!app/src/sensorik/
+!app/src/sensorik/*.cpp
+
+
+!app/ui/
+!app/ui/*.ui
+
+!app/img/
+!app/img/*
+
+!tests/
+!tests/CMakeLists.txt

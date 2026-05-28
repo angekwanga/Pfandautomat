@@ -1,0 +1,246 @@
+.
+├── app
+│   ├── CMakeLists.txt
+│   ├── img
+│   │   ├── automat4.png
+│   │   ├── beer.png
+│   │   ├── bottle_plastik.svg
+│   │   ├── can_orange.png
+│   │   ├── can_red.png
+│   │   ├── can_yellow.png
+│   │   ├── kisten.png
+│   │   ├── lase_light.png
+│   │   └── no_beer.png
+│   ├── include
+│   │   ├── bondialog.h
+│   │   ├── logindialog.h
+│   │   ├── mainwindow.h
+│   │   └── rappel.h
+│   ├── src
+│   │   ├── bondialog.cpp
+│   │   ├── logindialog.cpp
+│   │   ├── main.cpp
+│   │   ├── mainwindow.cpp
+│   │   └── rappel.cpp
+│   └── ui
+│       ├── bondialog.ui
+│       ├── logindialog.ui
+│       └── mainwindow.ui
+├── archi.txt
+├── build
+│   ├── Desktop_Qt_6_11_0-Debug
+│   │   ├── app
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── Pfandautomat_SE2_autogen.dir
+│   │   │   │   │   ├── AutogenInfo.json
+│   │   │   │   │   ├── AutogenUsed.txt
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── ParseCache.txt
+│   │   │   │   │   └── progress.make
+│   │   │   │   ├── Pfandautomat_SE2_autogen_timestamp_deps.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   └── progress.make
+│   │   │   │   ├── Pfandautomat_SE2.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── Pfandautomat_SE2_autogen
+│   │   │   │   │   │   ├── mocs_compilation.cpp.o
+│   │   │   │   │   │   └── mocs_compilation.cpp.o.d
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── logindialog.cpp.o
+│   │   │   │   │       ├── logindialog.cpp.o.d
+│   │   │   │   │       ├── main.cpp.o
+│   │   │   │   │       ├── main.cpp.o.d
+│   │   │   │   │       ├── mainwindow.cpp.o
+│   │   │   │   │       ├── mainwindow.cpp.o.d
+│   │   │   │   │       ├── rappel.cpp.o
+│   │   │   │   │       └── rappel.cpp.o.d
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── Makefile
+│   │   │   ├── Pfandautomat_SE2
+│   │   │   └── Pfandautomat_SE2_autogen
+│   │   │       ├── 6YEA5652QU
+│   │   │       │   ├── moc_logindialog.cpp
+│   │   │       │   ├── moc_logindialog.cpp.d
+│   │   │       │   ├── moc_mainwindow.cpp
+│   │   │       │   └── moc_mainwindow.cpp.d
+│   │   │       ├── deps
+│   │   │       ├── include
+│   │   │       │   ├── src
+│   │   │       │   │   └── ui_logindialog.h
+│   │   │       │   ├── ui
+│   │   │       │   │   └── ui_mainwindow.h
+│   │   │       │   └── ui_mainwindow.h
+│   │   │       ├── moc_predefs.h
+│   │   │       ├── mocs_compilation.cpp
+│   │   │       ├── timestamp
+│   │   │       └── UVLADIE3JM
+│   │   │           ├── moc_logindialog.cpp
+│   │   │           └── moc_logindialog.cpp.d
+│   │   ├── CMakeCache.txt
+│   │   ├── CMakeCache.txt.prev
+│   │   ├── CMakeFiles
+│   │   │   ├── 3.30.5
+│   │   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   │   ├── CMakeSystem.cmake
+│   │   │   │   └── CompilerIdCXX
+│   │   │   │       ├── a.out
+│   │   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │   │       └── tmp
+│   │   │   ├── cmake.check_cache
+│   │   │   ├── CMakeConfigureLog.yaml
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   ├── CMakeRuleHashes.txt
+│   │   │   ├── Makefile2
+│   │   │   ├── Makefile.cmake
+│   │   │   ├── pkgRedirects
+│   │   │   ├── progress.marks
+│   │   │   └── TargetDirectories.txt
+│   │   ├── cmake_install.cmake
+│   │   ├── Makefile
+│   │   ├── qtcsettings.cmake
+│   │   └── Testing
+│   │       └── Temporary
+│   │           └── LastTest.log
+│   └── Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+│       ├── app
+│       │   ├── CMakeFiles
+│       │   │   ├── CMakeDirectoryInformation.cmake
+│       │   │   ├── Pfandautomat_SE2_autogen.dir
+│       │   │   │   ├── AutogenInfo.json
+│       │   │   │   ├── AutogenUsed.txt
+│       │   │   │   ├── build.make
+│       │   │   │   ├── cmake_clean.cmake
+│       │   │   │   ├── compiler_depend.internal
+│       │   │   │   ├── compiler_depend.make
+│       │   │   │   ├── compiler_depend.ts
+│       │   │   │   ├── DependInfo.cmake
+│       │   │   │   ├── ParseCache.txt
+│       │   │   │   └── progress.make
+│       │   │   ├── Pfandautomat_SE2_autogen_timestamp_deps.dir
+│       │   │   │   ├── build.make
+│       │   │   │   ├── cmake_clean.cmake
+│       │   │   │   ├── compiler_depend.make
+│       │   │   │   ├── compiler_depend.ts
+│       │   │   │   ├── DependInfo.cmake
+│       │   │   │   └── progress.make
+│       │   │   ├── Pfandautomat_SE2.dir
+│       │   │   │   ├── build.make
+│       │   │   │   ├── cmake_clean.cmake
+│       │   │   │   ├── compiler_depend.internal
+│       │   │   │   ├── compiler_depend.make
+│       │   │   │   ├── compiler_depend.ts
+│       │   │   │   ├── DependInfo.cmake
+│       │   │   │   ├── depend.make
+│       │   │   │   ├── flags.make
+│       │   │   │   ├── includes_CXX.rsp
+│       │   │   │   ├── linkLibs.rsp
+│       │   │   │   ├── link.txt
+│       │   │   │   ├── objects1.rsp
+│       │   │   │   ├── objects.a
+│       │   │   │   ├── Pfandautomat_SE2_autogen
+│       │   │   │   │   ├── mocs_compilation.cpp.obj
+│       │   │   │   │   └── mocs_compilation.cpp.obj.d
+│       │   │   │   ├── progress.make
+│       │   │   │   └── src
+│       │   │   │       ├── main.cpp.obj
+│       │   │   │       ├── main.cpp.obj.d
+│       │   │   │       ├── mainwindow.cpp.obj
+│       │   │   │       └── mainwindow.cpp.obj.d
+│       │   │   └── progress.marks
+│       │   ├── cmake_install.cmake
+│       │   ├── Makefile
+│       │   ├── Pfandautomat_SE2_autogen
+│       │   │   ├── 6YEA5652QU
+│       │   │   │   ├── moc_mainwindow.cpp
+│       │   │   │   └── moc_mainwindow.cpp.d
+│       │   │   ├── deps
+│       │   │   ├── include
+│       │   │   │   └── ui_mainwindow.h
+│       │   │   ├── moc_predefs.h
+│       │   │   ├── mocs_compilation.cpp
+│       │   │   └── timestamp
+│       │   └── Pfandautomat_SE2.exe
+│       ├── CMakeCache.txt
+│       ├── CMakeCache.txt.prev
+│       ├── CMakeFiles
+│       │   ├── 3.30.5
+│       │   │   ├── CMakeCCompiler.cmake
+│       │   │   ├── CMakeCXXCompiler.cmake
+│       │   │   ├── CMakeDetermineCompilerABI_C.bin
+│       │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│       │   │   ├── CMakeRCCompiler.cmake
+│       │   │   ├── CMakeSystem.cmake
+│       │   │   ├── CompilerIdC
+│       │   │   │   ├── a.exe
+│       │   │   │   └── CMakeCCompilerId.c
+│       │   │   └── CompilerIdCXX
+│       │   │       ├── a.exe
+│       │   │       └── CMakeCXXCompilerId.cpp
+│       │   ├── cmake.check_cache
+│       │   ├── CMakeConfigureLog.yaml
+│       │   ├── CMakeDirectoryInformation.cmake
+│       │   ├── CMakeRuleHashes.txt
+│       │   ├── Makefile2
+│       │   ├── Makefile.cmake
+│       │   ├── Pfandautomat_SE2_autogen.dir
+│       │   │   ├── AutogenInfo.json
+│       │   │   ├── build.make
+│       │   │   ├── cmake_clean.cmake
+│       │   │   ├── compiler_depend.make
+│       │   │   ├── compiler_depend.ts
+│       │   │   ├── DependInfo.cmake
+│       │   │   └── progress.make
+│       │   ├── Pfandautomat_SE2_autogen_timestamp_deps.dir
+│       │   │   ├── build.make
+│       │   │   ├── cmake_clean.cmake
+│       │   │   ├── compiler_depend.make
+│       │   │   ├── compiler_depend.ts
+│       │   │   ├── DependInfo.cmake
+│       │   │   └── progress.make
+│       │   ├── Pfandautomat_SE2.dir
+│       │   │   ├── build.make
+│       │   │   ├── cmake_clean.cmake
+│       │   │   ├── compiler_depend.make
+│       │   │   ├── compiler_depend.ts
+│       │   │   ├── DependInfo.cmake
+│       │   │   ├── depend.make
+│       │   │   ├── flags.make
+│       │   │   ├── includes_CXX.rsp
+│       │   │   ├── linkLibs.rsp
+│       │   │   ├── link.txt
+│       │   │   ├── objects1.rsp
+│       │   │   └── progress.make
+│       │   ├── progress.marks
+│       │   └── TargetDirectories.txt
+│       ├── cmake_install.cmake
+│       ├── Makefile
+│       ├── qtcsettings.cmake
+│       └── Testing
+│           └── Temporary
+│               └── LastTest.log
+├── CMakeLists.txt
+├── README.md
+└── tests
+    └── CMakeLists.txt
+
+49 directories, 195 files

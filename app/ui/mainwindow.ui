@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1117</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Pfandautomat – Recyclever</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+  background: #f7f8fb;
+}
+QTabWidget::pane {
+  border: 0;
+}
+QTabBar::tab {
+  background: transparent;
+  color: #4b5563;
+  padding: 8px 14px;
+  margin-right: 6px;
+}
+QTabBar::tab:selected {
+  color: #111827;
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+}
+QFrame[frameShape=&quot;2&quot;] {
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+}
+QLabel#acceptedTitle,
+QLabel#lastThrowsTitle,
+QLabel#helpTitle {
+  color: #111827;
+  font-weight: 700;
+}
+QLabel#centerTitle {
+  color: #111827;
+  font-size: 20px;
+  font-weight: 800;
+}
+QLabel#statusText {
+  color: #111827;
+  font-weight: 700;
+}
+QLabel#timeLabel {
+  color: #6b7280;
+}
+QListWidget,
+QTableWidget {
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  gridline-color: #edf0f5;
+  selection-background-color: #dbeafe;
+  selection-color: #111827;
+}
+QHeaderView::section {
+  background: #f3f5f8;
+  color: #4b5563;
+  border: 0;
+  padding: 6px;
+  font-weight: 700;
+}
+QPushButton {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+QPushButton:hover {
+  background: #f3f5f8;
+  border-color: #b7c1d1;
+}
+QPushButton:pressed {
+  background: #e8edf5;
+}
+QPushButton:disabled {
+  color: #9ca3af;
+  background: #f3f4f6;
+}
+QPushButton#start_btn {
+  background: #1f6feb;
+  color: #ffffff;
+  border: 1px solid #1d4ed8;
+  font-weight: 800;
+  padding: 12px 12px;
+}
+QPushButton#start_btn:hover {
+  background: #1d4ed8;
+}
+QPushButton#stop_btn {
+  color: #991b1b;
+  border-color: #fecaca;
+}
+QPushButton#stop_btn:hover {
+  background: #fef2f2;
+}
+QPushButton#bon_btn {
+  color: #065f46;
+  border-color: #bbf7d0;
+}
+QPushButton#bon_btn:hover {
+  background: #f0fdf4;
+}
+QLabel#plastic_price,
+QLabel#glas_price,
+QLabel#can_price,
+QLabel#crate_price {
+  color: #12805c;
+  font-weight: 700;
+}
+QProgressBar {
+  background: #eef2f7;
+  border: 1px solid #d8dee9;
+  border-radius: 7px;
+  height: 14px;
+  text-align: center;
+}
+QProgressBar::chunk {
+  background: #1f6feb;
+  border-radius: 6px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="rootLayout">
+    <property name="spacing">
+     <number>18</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="appStack">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageApp">
+       <layout class="QVBoxLayout" name="pageAppLayout">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="topBar">
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+          <layout class="QHBoxLayout" name="topBarLayout">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTabWidget" name="mainTabs">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <property name="documentMode">
+              <bool>true</bool>
+             </property>
+             <property name="movable">
+              <bool>false</bool>
+             </property>
+             <widget class="QWidget" name="tabStart">
+              <attribute name="title">
+               <string>Start</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="startRoot">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="leftCol">
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::NoFrame</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="leftColLayout">
+                  <property name="spacing">
+                   <number>16</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="cardAccepted">
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="cardAcceptedLayout">
+                     <property name="spacing">
+                      <number>12</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="acceptedTitle">
+                       <property name="text">
+                        <string>Akzeptierte Gebinde</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QGridLayout" name="acceptedItemsGrid">
+                       <property name="horizontalSpacing">
+                        <number>10</number>
+                       </property>
+                       <property name="verticalSpacing">
+                        <number>12</number>
+                       </property>
+                       <item row="0" column="1">
+                        <widget class="QLabel" name="plastic_name">
+                         <property name="text">
+                          <string>Pet-Flasche</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLabel" name="plastic_price">
+                         <property name="text">
+                          <string>0.25 €</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QLabel" name="can_name">
+                         <property name="text">
+                          <string>Dose</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="glas_btn">
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="2">
+                        <widget class="QLabel" name="crate_price">
+                         <property name="text">
+                          <string>1.50 €</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QLabel" name="glas_price">
+                         <property name="text">
+                          <string>0.08 €</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1">
+                        <widget class="QLabel" name="crate_name">
+                         <property name="text">
+                          <string>Getränkekiste</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLabel" name="glas_name">
+                         <property name="text">
+                          <string>Glasflasche</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="can_btn">
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="2">
+                        <widget class="QLabel" name="can_price">
+                         <property name="text">
+                          <string>0.25 €</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="plastic_btn">
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0">
+                        <widget class="QPushButton" name="crate_btn">
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0">
+                        <widget class="QPushButton" name="invalid_btn">
+                         <property name="text">
+                          <string>?</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="1">
+                        <widget class="QLabel" name="label">
+                         <property name="text">
+                          <string>Ungültig / Nicht erkannt</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="cardActions">
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="cardActionsLayout">
+                     <property name="spacing">
+                      <number>10</number>
+                     </property>
+                     <item>
+                      <widget class="QPushButton" name="start_btn">
+                       <property name="text">
+                        <string>Start</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="actionsRow2">
+                       <property name="spacing">
+                        <number>10</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="bon_btn">
+                         <property name="text">
+                          <string>Bon</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="stop_btn">
+                         <property name="text">
+                          <string>Stop</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="rst_btn">
+                       <property name="text">
+                        <string>Reset</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="hilfe_btn">
+                       <property name="text">
+                        <string>Hilfe</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="centerCol">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>2</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::NoFrame</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="centerColLayout">
+                  <property name="spacing">
+                   <number>16</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="cardMain">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="cardMainLayout">
+                     <property name="spacing">
+                      <number>12</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="centerTitle">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>Bitte ein Gebinde einwerfen</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignmentFlag::AlignHCenter</set>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="topTitleSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>10</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="centerVisualRow">
+                       <item>
+                        <spacer name="centerLeftSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>30</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="automat_img">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>250</width>
+                           <height>300</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="scaledContents">
+                          <bool>true</bool>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignmentFlag::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="centerRightSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>30</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="imageBottomSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>15</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QProgressBar" name="progressBar">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>18</height>
+                        </size>
+                       </property>
+                       <property name="value">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="progressInfoRow">
+                       <property name="spacing">
+                        <number>10</number>
+                       </property>
+                       <property name="sizeConstraint">
+                        <enum>QLayout::SizeConstraint::SetFixedSize</enum>
+                       </property>
+                       <item>
+                        <spacer name="infoLeftSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="progressLabel">
+                         <property name="text">
+                          <string>Fortschritt:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="progressPercentLabel">
+                         <property name="text">
+                          <string>0%</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="infoCenterSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="simTimeLabel">
+                         <property name="text">
+                          <string>Sim. Zeit:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLCDNumber" name="lcdNumber">
+                         <property name="minimumSize">
+                          <size>
+                           <width>80</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>100</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="infoRightSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="resetTimerBtn">
+                       <property name="text">
+                        <string>resetTimer</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="progressBottomSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>10</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QToolButton" name="toggleStatesBtn">
+                       <property name="text">
+                        <string>Zustände anzeigen</string>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="checked">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="statesPanel">
+                       <property name="visible">
+                        <bool>false</bool>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::Shape::StyledPanel</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="statesPanelLayout">
+                        <property name="spacing">
+                         <number>8</number>
+                        </property>
+                        <item>
+                         <layout class="QGridLayout" name="gridStates">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="st1">
+                            <property name="text">
+                             <string>st1</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLabel" name="st1_color">
+                            <property name="text">
+                             <string>BEREIT</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="st2">
+                            <property name="text">
+                             <string>st2</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLabel" name="st2_color">
+                            <property name="text">
+                             <string>ERKENNUNG</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="st3">
+                            <property name="text">
+                             <string>st3</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QLabel" name="st3_color">
+                            <property name="text">
+                             <string>TRANSPORT</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="st4">
+                            <property name="text">
+                             <string>st4</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QLabel" name="st4_color">
+                            <property name="text">
+                             <string>SORTIERUNG</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="0">
+                           <widget class="QLabel" name="st5">
+                            <property name="text">
+                             <string>st5</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QLabel" name="st5_color">
+                            <property name="text">
+                             <string>RECHNEND</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="5" column="0">
+                           <widget class="QLabel" name="st6">
+                            <property name="text">
+                             <string>st6</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="5" column="1">
+                           <widget class="QLabel" name="st6_color">
+                            <property name="text">
+                             <string>LAGERUNG</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="6" column="0">
+                           <widget class="QLabel" name="st7">
+                            <property name="text">
+                             <string>st7</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="6" column="1">
+                           <widget class="QLabel" name="st7_color">
+                            <property name="text">
+                             <string>RUECKWEISUNG</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="7" column="0">
+                           <widget class="QLabel" name="st8">
+                            <property name="text">
+                             <string>st8</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="7" column="1">
+                           <widget class="QLabel" name="st8_color">
+                            <property name="text">
+                             <string>AUSGABE</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="8" column="0">
+                           <widget class="QLabel" name="st9">
+                            <property name="text">
+                             <string>st9</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="8" column="1">
+                           <widget class="QLabel" name="st9_color">
+                            <property name="text">
+                             <string>DONE</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="9" column="0">
+                           <widget class="QLabel" name="st10">
+                            <property name="text">
+                             <string>st10</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="9" column="1">
+                           <widget class="QLabel" name="st10_color">
+                            <property name="text">
+                             <string>BLOCKIERT</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="10" column="0">
+                           <widget class="QLabel" name="st11">
+                            <property name="text">
+                             <string>st11</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="10" column="1">
+                           <widget class="QLabel" name="st11_color">
+                            <property name="text">
+                             <string>WARTUNG</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="bottomStretchSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="DisplayMonitor" name="displayMonitor">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>2</horstretch>
+                   <verstretch>1</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>340</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tabPersonal">
+              <attribute name="title">
+               <string>Personal</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="personalLayout">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QListWidget" name="personalNavList"/>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="personalScrollArea">
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::NoFrame</enum>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="personalScrollContent">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>504</width>
+                    <height>456</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="personalRightCol">
+                   <property name="spacing">
+                    <number>16</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="personalHeaderLabel">
+                     <property name="text">
+                      <string>Personal-Bereich</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="personalNoStatesSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>10</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="personalHostLayout"/>
+                   </item>
+                   <item>
+                    <spacer name="personalBottomSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <spacer name="tabsSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="statusRow">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>♻</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Pfandautomat</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="statusRowSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="statusDot">
+            <property name="text">
+             <string>●</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="statusText">
+            <property name="text">
+             <string>BEREIT</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="timeLabel">
+            <property name="text">
+             <string>00:00:00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DisplayMonitor</class>
+   <extends>QFrame</extends>
+   <header>displaymonitor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
