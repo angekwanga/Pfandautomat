@@ -1,7 +1,3 @@
-# Pfandautomat SE2
-
-A semester project for SE2, implemented in C++ with Qt and CMake.
-
 ## Project Description
 
 This project models a bottle return machine (`Pfandautomat`) with multiple subsystems such as:
