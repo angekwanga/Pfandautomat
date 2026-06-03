@@ -41,6 +41,7 @@ public:
     // Vollständiger Reset der FSM + Sub-Controller.
     // Muss bei Stop→Start aufgerufen werden.
     void reset();
+    void simuliereTransport();
 
     AutomatZustand getAktuellerZustand() const { return m_aktuellerZustand; }
 
