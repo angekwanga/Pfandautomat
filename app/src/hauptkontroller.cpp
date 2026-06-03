@@ -140,4 +140,21 @@ void HauptController::zustandWechseln(AutomatZustand neuerZustand) {
     emit zustandGeaendert(m_aktuellerZustand);
 }
 
+void HauptController::simuliereTransport()
+{
+    auto &sc = m_sensorController;
+    const auto z = m_aktuellerZustand;
+
+    if (z == AutomatZustand::ERKENNUNG)
+        sc.getFlaschenLichtschranke().setzeZustand(LichtschrankeZustand::FREI);
+
+    if (z == AutomatZustand::TRANSPORT)
+        sc.getSortierLichtschranke().setzeZustand(LichtschrankeZustand::UNTERBROCHEN);
+
+    if (z == AutomatZustand::SORTIERUNG ||
+        z == AutomatZustand::RECHNEND   ||
+        z == AutomatZustand::LAGERUNG)
+        sc.getSortierLichtschranke().setzeZustand(LichtschrankeZustand::FREI);
+}
+
 } // namespace Pfandautomat
